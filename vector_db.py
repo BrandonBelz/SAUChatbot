@@ -4,6 +4,7 @@ from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaEmbeddings
 from typing import List
+from os import path
 
 def _create_vector_store(docs: List[Document], embeddings: OllamaEmbeddings):
     """Create and populate FAISS vector store"""
@@ -22,9 +23,9 @@ def _create_vector_store(docs: List[Document], embeddings: OllamaEmbeddings):
 def create_faiss() -> FAISS:
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
 
-    pdf_loader = PyPDFDirectoryLoader("DATA/pdfs")
+    pdf_loader = PyPDFDirectoryLoader(path.join("DATA", "pdfs"))
     pdf_docs = pdf_loader.load()
-    html_loader = UnstructuredHTMLLoader("DATA/home.html")
+    html_loader = UnstructuredHTMLLoader(path.join("DATA", "home.html"))
     html_docs = html_loader.load()
     docs = pdf_docs + html_docs
     

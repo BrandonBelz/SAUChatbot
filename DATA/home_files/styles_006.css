@@ -1,0 +1,299 @@
+/* 008 HP Events */
+#hp-events{
+    color: #184F2C;
+    font-family: var(--font-heading);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
+    background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,.1)),url('https://www.southern.edu/administration/marketing/img/homepage/topo-white.png');
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: #f5f7f6;
+    background-size: 600px;
+    background-repeat: repeat;
+	font-weight: 700;
+}
+
+#hp-events .component-header{ 
+  background-color: rgba(255,255,255, .1);
+  max-width: 370px;
+  text-align: center;
+  position: relative;
+  top: 50px;
+  padding: 15px 0;
+  margin-bottom: 75px;	
+  box-shadow: 0 8px 32px 0 rgb(31, 38, 135, .04);
+  border: 1px solid rgba( 255, 255, 255, 1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);	
+}
+
+#hp-events h3 a{
+    color: #000000;
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 2.5rem;
+	maring-inline: 15px;
+}
+
+#hp-events h3 span{
+    color: #CED54A;
+    font-family: var(--font-heading);
+	font-weight: 700;
+}
+
+#hp-events .main-content{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+#hp-events .calendar{
+  width:90%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+  justify-items: center;
+}
+
+#hp-events .calendar h4{
+  width: 100%;
+	max-width: 2075px;
+	font-size: 2rem;  
+	align-self: flex-start;
+	margin-bottom: 30px;
+  color: #184F2C;
+	font-weight: 600;
+}
+
+
+#hp-events .calendar .row h4{
+	margin: 30px 0;
+}
+
+#hp-events .week{
+  width:100%;
+  max-width: 1900px;
+  display: grid;
+/*   gap: 50px; */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  
+}
+
+#hp-events .week:nth-child(1){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+}
+
+#hp-events .week:nth-child(2){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+}
+
+#hp-events .week:nth-child(3){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 3;
+  grid-row-end: span 1;
+}
+
+#hp-events .week:nth-child(4){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 4;
+  grid-row-end: span 1;
+}
+
+#hp-events .week:nth-child(5){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 5;
+  grid-row-end: span 1;
+}
+
+#hp-events .week:nth-child(6){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 6;
+  grid-row-end: span 1;
+}
+
+#hp-events .week:nth-child(7){
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 7;
+  grid-row-end: span 1;
+}
+
+#hp-events .row{
+  margin-left: 25px;
+  border-bottom: 1px solid #646464;
+}
+
+#hp-events .row:last-child{
+ border-bottom: initial;
+}
+
+#hp-events .day{
+  height: 80px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+#hp-events .date {
+    height: 100%;
+    padding: 0 20px;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, .04);
+    border: 1px solid rgba( 255, 255, 255, 1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#hp-events .date-link{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#hp-events .date a{
+  text-decoration: none;
+}
+
+#hp-events .day h5{
+  margin: 0;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1.7rem;
+  color: #184F2C;
+}
+
+#hp-events .date-link h5:first-child{
+  margin: 0;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1.2rem;
+  color: #CED54A;
+}
+
+#hp-events .events{
+  height: 85%;
+}
+
+#hp-events .events .location{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  margin: initial;
+}
+
+#hp-events .events .location h6:first-child{
+  text-transform: uppercase;
+}
+
+#hp-events a{
+  text-decoration: none;  
+}
+
+#hp-events .event-link{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+
+#hp-events .time-range{
+	display: flex;
+	flex-flow: row nowrap;
+	gap:5px;
+}
+
+#hp-events .events h6,
+#hp-events .events .location h6{
+  color: #646464;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: .9rem;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+#hp-events .event-link .event-name{
+  font-size: 1.2rem;
+  color: #184F2C;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#hp-events .all-events {
+    height: 150px;
+    min-height: 15px;
+    max-height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    flex-direction: column;
+	padding-inline: 25px;
+}
+
+#hp-events a:not(.btn-effect01) {
+  line-height: 1.3;
+  position: relative;
+}
+
+#hp-events a:hover .event-name,
+#hp-events a:hover .time,
+#hp-events a:hover .location h6{
+  color: #CED54C;
+}
+
+@media (max-width: 787px) {
+
+	#hp-events .row {
+		margin-left: 10px;
+	}
+	#hp-events .day{
+		height: 130px;
+		gap: 30px;
+	}
+	
+	#hp-events .date {
+        height: 70%;
+    padding: 5px 15px;
+	}
+	
+	#hp-events .date-link h5:first-child {
+		font-size: .9rem;
+	}
+	
+	#hp-events .day h5 {
+		font-size: 1.3rem;
+	}
+	
+	#hp-events .events .location{
+		display: flex;
+		flex-flow: row wrap;
+		gap: 10px;
+		margin: initial;
+	}
+}
+/* End 008 HP Events */

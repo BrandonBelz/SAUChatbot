@@ -1,0 +1,223 @@
+/* HP 002 Your Passion */
+[name="h02"] {
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	max-height: 970px;
+	height: auto;
+	max-width: 90%;
+	gap: 40px;
+	margin-top: 30px;
+}	
+
+[name="h02"] .component-header {
+	flex-basis: 25%;
+	width: 90%;
+}
+
+[name="h02"] .component-header span.eyebrow {
+	font-size: 1rem;
+	color: #646464;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+[name="h02"] .component-header h3 {
+	font-family: var(--font-heading);
+	color: #000000;
+	font-weight:300;
+	text-transform: uppercase;
+	text-align: left;
+	margin-block: 0.5rem 1.5rem;
+	font-size: 2.5rem;
+}
+
+[name="h02"] h3 span {
+	font-family: var(--font-heading);
+	color: #CED54A;
+	font-weight: bold;
+}	
+
+[name="h02"] p {
+	font-family: var(--font-copy);
+	text-align: left;	
+}
+
+[name="h02"] .component-header p {
+	font-size: 1.1rem;	
+	margin: 0;
+	padding: 0;
+}
+
+[name="h02"] .swiper {
+	width: 64%;
+}
+
+[name="h02"] .swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+}
+
+[name="h02"] article {
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+[name="h02"] article video {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+[name="h02"] article .text-content {
+	--spacing: 1.5rem;
+	position: absolute;
+	min-height: 150px;
+	bottom: 0;
+	padding: var(--spacing);
+	gap: var(--spacing);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	background: linear-gradient(180deg, rgba(196,196,196,0) 0%, rgba(0,0,0,0.68) 65%);
+}
+
+[name="h02"] .text-content h4 {
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+[name="h02"] .text-content > div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	flex: 1;
+}
+
+[name="h02"] .text-content p {
+	font-style: italic;
+	color: #FFFFFF;
+	font-weight: 500;
+	line-height: 1.5;
+	font-size: .8rem;
+	margin-block: 0 auto;
+	text-align: center;
+}
+
+[name="h02"] .text-content .underline {
+	border-bottom: 2px solid #FFFFFF;
+	width: 100%;
+}
+
+[name="h02"] article .play-button {
+	position: absolute;
+	left: 50%;
+	top: 33%;
+	z-index: 1;
+	margin-top: -10px;
+	margin-left: -10px;
+	height: 20px;
+	pointer-events: none;
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+}
+
+[name="h02"] article .play-button.hide {
+	opacity: 0;
+}
+
+@media (min-width: 600px) {
+	[name="h02"] .swiper {
+		width: 100%;
+		flex-basis: 75%;
+	}
+	[name="h02"] .swiper-wrapper {
+		justify-content: center;
+		gap: 20px;
+	}
+	[name="h02"] .swiper-slide {
+		width: auto;
+		border-radius: 0px;
+	}
+	[name="h02"] article {
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		flex-basis: calc(33% - 20px);
+		max-width: 400px;
+	}
+	[name="h02"].faded-in article:nth-of-type(1) {
+		-webkit-animation-name: fadeInUp;
+		animation-name: fadeInUp;
+		animation-delay: 0s;
+	}
+	[name="h02"].faded-in article:nth-of-type(2) {
+		-webkit-animation-name: fadeInUp;
+		animation-name: fadeInUp;
+		animation-delay: 300ms;
+	}
+	[name="h02"].faded-in article:nth-of-type(3) {
+		-webkit-animation-name: fadeInUp;
+		animation-name: fadeInUp;
+		animation-delay: 600ms;
+	}
+	[name="h02"] article .text-content {
+		--spacing: clamp(0.5rem, 0.25rem + 2vw, 2.5rem);
+	}
+}
+
+@media (min-width: 900px) {
+	[name="h02"] article .play-button {
+		top: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	[name="h02"] {
+		height: 50vh;
+		flex-flow: row nowrap;
+	}
+	[name="h02"] .component-header {
+		width: auto;
+	}
+	[name="h02"] article {
+		max-height: 50vh;
+	}
+}
+
+@media (min-width: 1700px) {
+	[name="h02"] {
+		height: 70vh;
+	}
+	[name="h02"] article {
+		max-height: 70vh;
+	}
+}
+
+/* Animation */
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 30%, 0);
+		transform: translate3d(0, 30%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+/* End HP 002 Your Passion */

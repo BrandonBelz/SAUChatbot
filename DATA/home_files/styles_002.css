@@ -1,0 +1,269 @@
+/* HP 005 Degrees */
+#hp-degrees {
+	min-width: 100%;
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	background-color: #e8ebe9;
+	gap: 50px;
+	margin: 0px;
+	padding-block: 60px 140px;
+}
+
+#hp-degrees .component-header {
+	width: 50vw;
+}
+
+#hp-degrees .component-header h6 {
+	font-size: 1rem;
+	color: #646464;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-weight: 600;
+	text-align: center;
+}
+
+#hp-degrees .component-header h3 {
+	font-family: "Neue Helvetica Condensed";
+	color: #000000;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: left;
+	margin-bottom: 15px;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+#hp-degrees h3 span {
+	font-family: 'Neue Helvetica Condensed';
+	color: #ced54a;
+	font-weight: 700;
+}
+
+#hp-degrees p {
+	font-family: "Open Sans";
+	text-align: center;
+}
+
+#hp-degrees .component-header p {
+	max-width: 100%;
+	justify-content: left;
+	font-size: 1.1rem;
+	color: #646464;
+
+}
+
+#hp-degrees .degrees-card p {
+	font-family: Open Sans;
+	text-align: left;
+}
+
+#hp-degrees .card-no-img {
+	width: 80%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 45px;
+}
+
+#hp-degrees .card-no-img div {
+	display: flex;
+	width: 60%;
+	flex-flow: row nowrap;
+	gap: 30px;
+}
+
+/* Buttons */
+#hp-degrees .buttons {
+	text-align: center;
+}
+
+#hp-degrees .degrees-card div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	border-radius: 5px;
+}
+
+#hp-degrees .degrees-card .container {
+	justify-content: flex-start;
+}
+
+#hp-degrees .degrees-card a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 40px;
+}
+
+#hp-degrees .degrees-card .tooltip {
+	width: 30px;
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: initial;
+	gap: initial;
+	align-items: flex-end;
+	position: relative;
+}
+
+
+#hp-degrees .degrees-card .help {
+	background: transparent;
+	font-family: 'Neue Helvetica Condensed';
+	color: #B0B0B0 !important;
+	position:relative;
+	box-sizing:border-box;
+	width:30px;
+	height:30px;
+	border:2px solid #B0B0B0;
+	padding:0;
+	border-radius:50%;
+	font-size:18px;
+	font-weight:700;
+	cursor:pointer;
+	align-self: center;
+	margin-top: 4px;
+	font-weight: 500;
+}
+
+#hp-degrees .degrees-card .tool-tip-copy {
+	display: block;
+	font-family: "Neue Helvetica Condensed";
+	max-height: 0;
+	opacity: 0;
+	width: 500px;
+	max-width: 900px;
+	overflow-wrap: normal;
+	font-weight: 500;
+	position: absolute;
+    top: 33px;
+    right: -9px;
+	line-height:1.8;
+	margin: 24px 0;
+	padding:10px 30px;
+	text-align:left;
+	background:#808080;
+	background:rgba(255,255,255,1);
+	box-shadow: 0px -8px 15px rgba(134, 166, 145, 0.1), 0px 8px 8px rgba(31, 38, 135, 0.18);
+	border-radius:10px;
+	white-space: normal;
+	color:#808080;
+	transition: opacity 300ms, max-height 300ms;
+	z-index: 2;
+	visibility: hidden;
+}
+
+#hp-degrees .degrees-card .tool-tip-copy:before {
+	content:'';
+	position:absolute;
+	width:0;
+	max-height:0;
+	border: 17px solid transparent;
+	border-bottom-color: #808080;
+	border-bottom-color: rgba(255,255,255,1);
+	border-top: 0;
+	top: -13px;
+	margin: auto 0;
+	right: 7px;
+	border-radius: 10px;
+	pointer-events: none;
+}
+
+#hp-degrees .degrees-card .help:hover + .tool-tip-copy,
+#hp-degrees .degrees-card .help:focus + .tool-tip-copy {
+	height: auto;
+	max-height: 150px;
+	opacity: 1;
+	transition: opacity 600ms, max-height 300ms;
+	visibility: visible;
+}
+
+@media (max-width:1360px){
+	#hp-degrees .card-no-img div {
+		width: 80%;
+		gap: 25px;
+		justify-content: center;
+	}
+	#hp-degrees .degrees-card .container{
+		margin: 0;
+	}
+}
+
+@media (max-width:1150px){
+	#hp-degrees .component-header {
+		width: 80vw;
+		justify-content: center;
+	}
+}
+
+@media (max-width:800px){
+	#hp-degrees .card-no-img div {
+		gap: 20px;
+	}
+	#hp-degrees .degrees-card .tool-tip-copy{
+		width: 425px;
+	}
+}
+
+@media (max-width:675px){
+	#hp-degrees .card-no-img{
+		width: 95%;
+	}
+	#hp-degrees .degrees-card .help{
+		width: 25px;
+		height: 25px;
+		font-size: 16px;
+	}
+	#hp-degrees .degrees-card .tool-tip-copy{
+		max-width:300px;
+	}
+}
+
+@media (max-width:550px){
+	#hp-degrees .card-no-img{
+		width: 95%;
+	}
+	#hp-degrees .degrees-card a {
+		font-size: 1rem;
+	}
+	#hp-degrees .degrees-card .tool-tip-copy{
+		max-width:300px;
+	}
+}
+
+@media (max-width:450px){
+	#hp-degrees .card-no-img{
+		width: 100%;
+	}
+	#hp-degrees .card-no-img div {
+		gap: 15px;
+	}
+	#hp-degrees .degrees-card a {
+		font-size: .9rem;
+	}
+}
+
+@media (max-width:450px){
+	#hp-degrees .degrees-card .tool-tip-copy{
+		top: 20px;
+		right: -25px;
+		padding: 10px 20px;
+	}
+	#hp-degrees .degrees-card .tool-tip-copy:before{
+		right: 23px;
+	}
+}
+
+@media (max-width:375px){
+	#hp-degrees .degrees-card a {
+		font-size: .8rem;
+	}
+	#hp-degrees .degrees-card .tool-tip-copy{
+		max-width:275px;
+	}
+}
+
+/* End HP 005 Degrees */

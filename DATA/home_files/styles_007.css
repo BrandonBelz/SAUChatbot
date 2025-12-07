@@ -1,0 +1,267 @@
+/* HP 001 Video */
+[name="h01-video"] {
+	position: relative;
+	height: calc(100dvh - 126px);
+	background-color: var(--color-evergreen);
+}
+
+[name="h01-video"] .hero-video {
+	height: 100%;
+	position: relative;
+}
+
+[name="h01-video"] video {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	object-fit: cover;
+	background-color: #FFFFFF;
+}
+
+[name="h01-video"] .hero-video-title {
+	position: absolute;
+	display: flex;
+	bottom: 225px;
+}
+
+[name="h01-video"] .horizontal-lines {
+	width: 60px;
+	margin: 0 5px;
+	opacity: 1;
+	background: repeating-linear-gradient( -45deg, rgba(255,255,255,0.4), rgba(255,255,255,0.4) 1px, transparent 1.5px, transparent 8px);
+	height: 217px;
+}
+
+[name="h01-video"] .hero-video-title h1 {
+	font-size: 90px;
+	color: #000;
+	font-weight: 200;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 5px;
+	margin: 0;
+}
+
+[name="h01-video"] .hero-video-title h1 span.first,
+[name="h01-video"] .hero-video-title h1 span.second {
+	font-family: var(--font-heading);
+	background-color: #fff;
+	padding: 0 15px;
+}
+
+[name="h01-video"] .hero-video-title h1 span.second {
+	font-weight: 600;
+}
+
+[name="h01-video"] .hero-video-title h1 span span {
+	color: #ced54a;
+}
+
+[name="h01-video"] [name="scroll-svg"] {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -30px;
+	cursor: pointer;
+}
+
+[name="h01-video"] #hero-video-pause {
+	position: absolute;
+	bottom: 30px; 
+	left: 30px;
+	color: #fff;
+	font-family: var(--font-copy);
+	background-color: rgba(24, 79, 44, .75);
+	padding: 25px 20px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+[name="h01-video"] #hero-video-pause span.fa-pause {
+	display: block;
+}
+
+[name="h01-video"] #hero-video-pause span.fa-play {
+	display: none;
+}
+
+[name="h01-video"] #hero-video-pause.paused span.fa-play {
+	display: block;
+}
+
+[name="h01-video"] #hero-video-pause.paused span.fa-pause {
+	display: none;
+}
+
+[name="h01-video"] [name="scroll-svg"] svg {
+	width: 60px;
+	height: 38px;
+	-webkit-animation: breathing 4s ease-out infinite normal;
+	animation: breathing 4s ease-out infinite normal;  
+}
+[name="h01-video"] [name="scroll-svg"] svg .b {
+	font-size: 92.34px;
+	font-family: HelveticaNeueLTStd-Cn, Helvetica Neue LT Std;
+}
+
+[name="h01-video"] .hero-list :is(#heroCalendarLink, #heroCampusNewsLink) {
+	display: none;
+}
+
+@-webkit-keyframes breathing {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(0.7);
+	}
+
+	25% {
+		-webkit-transform: scale(1.4);
+		transform: scale(1.4);
+	}
+
+	60% {
+		-webkit-transform: scale(1);
+		transform: scale(0.7);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes breathing {
+	0% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	25% {
+		-webkit-transform: scale(1.4);
+		-ms-transform: scale(1.4);
+		transform: scale(1.4);
+	}
+
+	60% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@media (min-width: 768px) {
+	[name="h01-video"] #hero-request-information {
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		background-color: rgba(24, 79, 44, 0.7);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		z-index: 1;
+		padding: 20px 45px;
+		border-radius: 5px;
+		max-height: 45px;
+	}
+	[name="h01-video"] #hero-request-information a {
+		color: #fff;
+		font-family: var(--font-heading);
+		font-size: 1.3em;
+		text-decoration: none;
+		font-weight: 600;
+		background: none;
+		box-shadow:none;
+		white-space: nowrap;
+	}
+	[name="h01-video"] #hero-request-information span {
+		color: #fff;
+	}
+	[name="h01-video"] #hero-request-information svg {
+		display: none;
+	}
+	[name="h01-video"] #hero-request-information a:after {
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	[name="h01-video"] {
+		height: auto;
+		background-color: #184f2c;
+	}
+	[name="h01-video"] .hero-list :is(#heroCalendarLink, #heroCampusNewsLink) {
+		display: block;
+	}
+	[name="h01-video"] .hero-video {
+		height: 75dvh;
+	}
+	[name="h01-video"] .hero-video-title {
+		bottom: 15%;
+	}
+	[name="h01-video"] #hero-video-pause {
+		left: unset;
+		right: 20px;
+		bottom: 20px;	
+	}
+	[name="h01-video"] [name="scroll-svg"] {
+		display: none;
+	}
+
+	[name="h01-video"] .hero-video-title h1 {
+		font-size: 60px;
+	}
+
+	[name="h01-video"] .horizontal-lines {
+		height: 146px;
+	}
+
+	[name="h01-video"] #hero-video-pause {
+		padding: 20px 15px;
+	}
+	[name="h01-video"] .hero-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 30px;
+	}
+	[name="h01-video"] .hero-list a {
+		min-width: 205px;
+		justify-content: space-between;
+	}
+	[name="h01-video"] .hero-list a span {
+		padding-left: 15px;
+	}
+	[name="h01-video"] .hero-list a svg {
+		padding-right: 15px;
+	}
+}
+
+@media (max-width: 500px) {
+	[name="h01-video"] .hero-video-title h1 {
+		font-size: 42px;
+	}
+	[name="h01-video"] .horizontal-lines {
+		display: none;
+	}
+	[name="h01-video"] .hero-video {
+		height: 60dvh;
+	}
+}
+
+/* Announcement Bar HP 001 Styles */
+@media (min-height: 700px) and (min-width: 768px) {
+	.components:has(#announcementBar) [name="h01-video"] {
+		height: calc(100dvh - 126px - 150px);
+	}
+}
+/* End HP 001 Video */

@@ -1,0 +1,472 @@
+/* HP 011 RFI Bar */
+#rfi-bar-new {
+	background-color: #E3E696;
+	width: 100%;
+	position: relative;
+	margin: 0;
+}
+
+#rfi-bar-new .announcement {
+	width: 100%;
+	height:inherit;
+	display:flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: flex-start;
+	overflow:hidden;
+	top:0;
+	display: flex;
+	text-align: center;
+	position: relative;
+}
+
+#rfi-bar-new .announcement:before {
+	content: "";
+	position:absolute;
+	width:43%;
+	min-width: 500px;
+	height: 65px;
+	top: 0px;
+	left: -50px;
+	transform: skew(40deg);
+	box-shadow: 0 0 70px 40px rgb(154 160 45 / 45%);
+	background-color: var(--color-lime);
+	transition: width 300ms;
+}
+
+#rfi-bar-new .announcement:after {
+	content: "HAVE QUESTIONS? Request Information";
+	position: absolute;
+	width: 43%;
+	min-width: 450px;
+	left:-100px;
+	display: flex;
+	justify-content: flex-end;
+	font-family: 'Neue Helvetica Condensed';
+	font-size: 1.2rem;
+	color: var(--color-evergreen);
+	transition: width 300ms;
+	font-weight: bold;
+}
+
+#rfi-bar-new .contact h3 {
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+	display: flex;
+	justify-content: flex-end;
+	text-transform: capitalize;
+	color: var(--color-evergreen);
+}
+
+#rfi-bar-new span {
+	text-transform: uppercase;
+}
+
+#rfi-bar-new .email-bar {
+	width: 57%;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+#rfi-bar-new .announcement #closeForm {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	right: 25px;
+	top: 23px;
+	z-index: 1;
+}
+
+#rfi-bar-new #closeForm .fa-times {
+	color: var(--color-evergreen);
+	font-size: 1em;
+}
+
+#rfi-bar-new .spacer {
+	width: 43%;
+	height: 65px;
+}
+
+#rfi-bar-new .announcement input {
+	height: 38px;
+	width: 70%;
+	max-width: 900px;
+	border: #fff;
+	margin: initial;
+	padding-left: 15px;
+}
+
+#rfi-bar-new #rfiExpanded {
+	width: 100%;
+	background-color: var(--color-evergreen);
+	display: flex;
+	flex-flow: row;
+	height: 0px;
+	transition: height 300ms;
+	overflow: hidden;
+}
+
+#rfi-bar-new .col-contact{
+	width: 100%;
+	background: rgba(24,79,44,0.64);
+	overflow: hidden;
+	height: 100%;
+	z-index: 2;
+	position: relative;
+}
+
+#rfi-bar-new .contact {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#rfi-bar-new .contact h3,
+#rfi-bar-new .contact p {
+	color:#FFFFFF;
+	position: initial;
+}
+
+#rfi-bar-new .contact > a span,
+#rfi-bar-new .contact > p span {
+	margin: 10px 10px 0 0;
+	color: #E3E696;
+}
+
+
+/* #rfi-bar-new .contact > a svg path,
+#rfi-bar-new .contact > p svg path {
+fill: #E3E696;
+} */
+
+#rfi-bar-new .contact a {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+
+#rfi-bar-new .rfi-contact {
+	width: 65%;
+	background-image: url('https://www.southern.edu/administration/marketing/img/homepage/rfi-img.jpg');
+	background-size: cover; 
+}
+
+#rfi-bar-new #rfiFormBar {
+	width: 35%;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+#rfi-bar-new #rfiFormBar .rfi-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-inline: 1rem;
+}
+
+#rfi-bar-new #rfiFormBar .rfi-inner h3 {
+	color: #fff;
+}
+#rfi-bar-new #rfiFormBar p {
+	max-width: 850px;
+	color: #FFFFFF;
+	line-height: 1.5;
+	font-size: .8rem;
+}
+
+#rfi-bar-new #rfiFormBar .form_label {
+	display: none;
+}
+#rfi-bar-new #rfiFormBar .form_birthdate .form_label{
+	display: initial;
+	color: #fff;
+	font-family: 'Open Sans';
+	font-weight: bold;
+}
+
+#rfi-bar-new #rfiFormBar .form_responses:has(select) {
+	display: flex;
+}
+
+#rfi-bar-new #rfiFormBar select {
+	display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cacaca;
+    border-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+}
+
+#rfi-bar-new #rfiFormBar select[aria-label="Month"],
+#rfi-bar-new #rfiFormBar select[aria-label="Day"],
+#rfi-bar-new #rfiFormBar select[aria-label="Year"] {
+	padding: 6px 0px;
+/* 	width: 32%; */
+	flex: 1;
+	display: initial;
+}
+
+#rfi-bar-new #rfiFormBar textarea {
+	resize: vertical;
+	min-height: 2rem;
+	height: 4rem;
+	max-height: 140px;
+}
+#rfi-bar-new .announcement input::placeholder {
+	font-family: "Neue Helvetica Condensed";
+	font-weight: 500;
+}
+
+
+#rfi-bar-new #submitButtonSVG {
+	display: none;
+	margin-left: 5px;
+	stroke: var(--color-evergreen);
+	height: 20px;
+	fill: none;
+	stroke-width: 10px;
+}
+
+@media (max-width: 1200px){
+	#rfi-bar-new .announcement:before{
+		content: "";
+		position:absolute;
+		width:20%;
+		min-width: 425px;
+		transition: width 300ms;
+	}
+
+	#rfi-bar-new .email-bar {
+		width: 70%;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 20px;
+	}
+
+	#rfi-bar-new .spacer  {
+		width: 20%;
+		min-width: 425px;
+		height: 65px;
+	}
+
+	#rfi-bar-new .announcement:after {
+		position: absolute;
+		width: 40%;
+		min-width: 450px;
+		left: 50px;
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+
+
+/* Active */
+#rfi-bar-new.active .announcement:before {
+	width: 110%;
+	transition: width 500ms;
+}
+#rfi-bar-new.active .announcement .email-bar {
+	display: none;
+}
+
+#rfi-bar-new.active #closeForm {
+	display: block;
+}
+#rfi-bar-new.active #closeForm .fa-chevron-down {
+	display: none;
+}
+#rfi-bar-new.active #rfiExpanded {
+	height: 1050px;
+	transition: height 500ms;
+	border-bottom: 2px solid #fff;
+}
+#rfi-bar-new.active .announcement:after {
+	width: 100%;
+	justify-content: center;
+	left: 0;
+	transition: width 500ms;
+}
+
+#rfi-bar-new form button.form_button_submit {
+	color: var(--color-evergreen);
+	background: var(--color-lime);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+	font-size: 1.1em;
+	font-family: 'Neue Helvetica Condensed';
+	appearance: none;
+	border: 2px solid var(--color-lime);
+	border-radius: 3px;
+	box-shadow: none;
+	text-align: left;
+	width: 100%;
+	transition: background 300ms, border 300ms;
+	cursor: pointer;
+}
+
+#rfi-bar-new form button.form_button_submit.btnHidden {
+	display: none;
+}
+
+#rfi-bar-new form button.form_button_submit:hover {
+	background: var(--color-evergreen);
+	transition: background 300ms, border 300ms;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+#rfi-bar-new form button.form_button_submit:hover svg {
+	stroke: #fff;	
+}
+
+/* Slate Edit for Commercial*/
+
+#rfi-bar-new #rfiFormBar div[data-type="checkbox"] .form_label{
+	display: block;
+}
+
+#rfi-bar-new #rfiFormBar div[data-type="checkbox"] .form_responses {
+	gap: 0.2rem 0.4rem;
+	color: #fff;
+}
+
+#rfi-bar-new #rfiFormBar div[data-type="checkbox"] .form_label p{
+	display: initial;
+	color: #fff;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: inherit;
+}
+
+
+/* End Slate Edit for Commercial*/
+
+
+@media (max-width: 1025px) {
+	#rfi-bar-new .announcement:before{
+		height: 150px;
+		left: -100px;
+	}
+	#rfi-bar-new .rfi-contact {
+		width: 50%;
+	}
+	#rfi-bar-new #rfiFromBar {
+		width: 50%;
+	}
+	#rfi-bar-new #rfiFormBar .rfi-inner {
+		padding-inline: 0;
+	}
+}
+
+@media (max-width: 750px) {
+	#rfi-bar-new .announcement {
+		background-color: var(--color-lime);
+	}
+	#rfi-bar-new .announcement:before {
+		display: none;
+	}
+	#rfi-bar-new .announcement #closeForm {
+		display: block;
+	}
+	#rfi-bar-new .announcement #closeForm .fa-times {
+		display: none;
+	}
+	#rfi-bar-new.active .announcement #closeForm .fa-times {
+		display: initial;
+	}
+	#rfi-bar-new.active .announcement #closeForm .fa-chevron-down {
+		display: none;
+	}
+	#rfi-bar-new .email-bar {
+		display: none;
+	}
+	#rfi-bar-new .announcement:after {
+		content: 'HAVE QUESTIONS \A Request Information';
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		left: 0;
+		white-space: pre-wrap;
+		min-width: 0px;
+	}
+	#rfi-bar-new #rfiExpanded {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#rfi-bar-new.active #rfiExpanded {
+		height: 1200px;
+	}
+	#rfi-bar-new .rfi-contact {
+		order: 2;
+		background-image: none;
+		background-color: var(--color-evergreen);
+		width: 80%;
+		margin: 60px auto 30px auto;
+	}
+	#rfi-bar-new .contact {
+		position: initial;
+		width: 100%;
+		align-items: flex-start;
+		max-width: 100%;
+	}
+	#rfi-bar-new .clip-polygon {
+		clip-path: none;
+	}
+	#rfi-bar-new .contact h3 {
+		display: initial;
+		text-align: center;
+		text-transform: initial;
+	}
+	#rfi-bar-new .contact > a,
+	#rfi-bar-new .contact > p {
+		max-width: 200px;
+		min-width: 200px;
+		margin: 0 auto;
+		font-size: 0.9em;
+	}
+	#rfi-bar-new .rfi-contact .hp-button-group {
+		width: 100%;
+		margin-top: 1em;
+	}
+	#rfi-bar-new #rfiFormBar {
+		width: 80%;
+	}
+	#rfi-bar-new #rfiFormBar h3 {
+		text-transform: initial;
+		color: var(--color-lime);
+	}
+	#rfi-bar-new #rfiFormBar .rfi-inner {
+		width: 100%;
+	}
+	#rfi-bar-new #rfiFormBar .action {
+		display: flex;
+		justify-content: center;
+	}
+}
+/* End HP 011 RFI Bar */

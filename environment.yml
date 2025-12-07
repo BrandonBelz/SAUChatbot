@@ -2,8 +2,6 @@ name: langchain_southern
 channels:
   - defaults
 dependencies:
-  - _libgcc_mutex=0.1
-  - _openmp_mutex=5.1
   - aiodns=3.5.0
   - aiohappyeyeballs=2.6.1
   - aiohttp=3.13.2
@@ -58,7 +56,6 @@ dependencies:
   - jpeg=9f
   - jsonpatch=1.33
   - jsonpointer=3.0.0
-  - lame=3.100
   - langchain=0.3.27
   - langchain-community=0.3.30
   - langchain-text-splitters=0.3.11
@@ -68,7 +65,6 @@ dependencies:
   - langgraph-sdk=0.2.9
   - langsmith=0.4.32
   - lcms2=2.17
-  - ld_impl_linux-64=2.44
   - leptonica=1.82.0
   - lerc=4.0.0
   - libarchive=3.8.2
@@ -76,23 +72,18 @@ dependencies:
   - libdeflate=1.22
   - libffi=3.4.4
   - libglib=2.84.4
-  - libgomp=15.2.0
   - libhwloc=2.12.1
   - libiconv=1.16
   - libmpdec=4.0.0
   - libogg=1.3.5
   - libopenjpeg=2.5.4
-  - libopus=1.3.1
   - libpng=1.6.50
   - libtheora=1.2.0
   - libtiff=4.7.1
-  - libuuid=1.41.5
   - libuv=1.48.0
   - libvorbis=1.3.7
-  - libvpx=1.15.2
   - libwebp=1.6.0
   - libwebp-base=1.6.0
-  - libxcb=1.17.0
   - libxml2=2.13.9
   - libzlib=1.3.1
   - lz4-c=1.9.4
@@ -106,11 +97,9 @@ dependencies:
   - mkl_random=1.3.0
   - multidict=6.7.0
   - mypy_extensions=1.0.0
-  - ncurses=6.5
   - numexpr=2.14.1
   - numpy=2.3.5
   - numpy-base=2.3.5
-  - openh264=2.6.0
   - openjpeg=2.5.4
   - openssl=3.0.18
   - orjson=3.11.4
@@ -140,7 +129,6 @@ dependencies:
   - python_abi=3.13
   - pytz=2025.2
   - pyyaml=6.0.3
-  - readline=8.3
   - requests=2.32.5
   - requests-toolbelt=1.0.0
   - rich=14.2.0
@@ -157,7 +145,6 @@ dependencies:
   - tbb=2022.3.0
   - tbb-devel=2022.3.0
   - tenacity=9.1.2
-  - tesseract=5.2.0
   - tk=8.6.15
   - tomlkit=0.13.3
   - tqdm=4.67.1
@@ -169,15 +156,8 @@ dependencies:
   - tzdata=2025b
   - urllib3=2.5.0
   - uvicorn=0.35.0
-  - uvloop=0.22.1
   - websockets=15.0.1
   - wheel=0.45.1
-  - xorg-libx11=1.8.12
-  - xorg-libxau=1.0.12
-  - xorg-libxdmcp=1.1.5
-  - xorg-libxext=1.3.6
-  - xorg-libxrender=0.9.12
-  - xorg-xorgproto=2024.1
   - xxhash=0.8.0
   - xz=5.6.4
   - yaml=0.2.5

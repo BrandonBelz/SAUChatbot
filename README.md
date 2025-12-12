@@ -13,7 +13,7 @@ A small multi-agent RAG (Retrieval-Augmented Generation) chatbot for Southern Ad
 - Ollama (local model runtime) and the required Ollama models used in the code:
   - `qwen2.5:14b` (LLM in `southern_chatbot.py`)
   - `nomic-embed-text` (embeddings model in `southern_chatbot.py` & `vector_db.py`)
-  For Ollama installation and model management see: [https://ollama.com/docs/](https://docs.ollama.com/)
+  For Ollama installation and model management see: https://docs.ollama.com/
 - Files to index placed under `DATA/`:
   - `DATA/pdfs/` (PDF files)
   - `DATA/home.html` (HTML document)
@@ -28,7 +28,7 @@ Note: The conda environment includes `faiss-cpu` and many other dependencies via
    conda activate langchain_southern
    ```
 
-2. Install and run Ollama following their docs (https://ollama.com/docs/) and ensure the models referenced in the code are available.
+2. Install and run Ollama following their docs (https://docs.ollama.com/) and ensure the models referenced in the code are available.
 
 3. Provide the documents to index:
    - Put PDF files under `DATA/pdfs/`

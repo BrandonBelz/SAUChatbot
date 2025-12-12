@@ -65,15 +65,6 @@ python southern_chatbot.py
 - If the FAISS index is absent, the repository will attempt to create it from `DATA/`. Make sure required files and loaders are present.
 
 ## Troubleshooting
-- If the app cannot find Ollama models, confirm the Ollama daemon is running and the models are installed (see https://ollama.com/docs/).
+- If the app cannot find Ollama models, confirm the Ollama daemon is running and the models are installed (https://docs.ollama.com/).
 - If FAISS fails to load or build, confirm `faiss-cpu` is installed in the environment and that `DATA/` contains indexable files.
 - Some dependencies in `environment.yml` are pinned and may need adjustment for your OS or newer package versions.
-
-## Contributing
-Small project — feel free to open issues or PRs. Typical improvements:
-- Add CI or tests
-- Add docs for model setup (Ollama)
-- Add sample data for easier local testing
-
-## License
-Choose a license for the repository (e.g., MIT, Apache-2.0). Add a `LICENSE` file at the repo root if you want to publish under a specific license.
